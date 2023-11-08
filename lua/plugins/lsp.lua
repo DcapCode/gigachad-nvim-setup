@@ -1,13 +1,13 @@
-return 
+return
 {
-	
 	{'williamboman/mason.nvim'},
 	{'williamboman/mason-lspconfig.nvim'},
 	{
-		'VonHeikemen/lsp-zero.nvim', 
+		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v3.x',
-		config = function() 
+		config = function()
 			local lsp = require('lsp-zero')
+            lsp.extend_lspconfig()
             require('mason').setup({})
             require('mason-lspconfig').setup({
                 ensure_installed = {
@@ -54,7 +54,6 @@ return
                     ['<C-y>'] = cmp.mapping.confirm({select = true}),
 				    ['<C-space>'] = cmp.mapping.complete()
                 })
-                
             })
 
 			lsp.set_preferences({
@@ -74,7 +73,7 @@ return
 				map('n', '<leader>vca', function() vim.lsp.buf.code_action() end, opts)
 				map('n', '<leader>vrr', function() vim.lsp.buf.references() end, opts)
 				map('n', '<leader>vrn', function() vim.lsp.buf.rename() end, opts)
-				map('i', '<C-h>', function() vim.lsp.buf.signature_help() end, opts)	
+				map('i', '<C-h>', function() vim.lsp.buf.signature_help() end, opts)
 			end)
 			lsp.setup()
 		end

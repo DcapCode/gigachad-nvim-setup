@@ -7,7 +7,16 @@ return
 		end,
 		config = function()
 			require('nvim-treesitter.configs').setup({
-				ensure_installed = {'c_sharp', 'svelte','html', 'css', 'javascript', 'typescript', 'lua', 'rust'},
+				ensure_installed = {
+                    'c_sharp',
+                    'svelte',
+                    'html',
+                    'css',
+                    'javascript',
+                    'typescript',
+                    'lua',
+                    'rust'
+                },
 				highlight = { enable = true },
 				sync_install = false,
 				auto_install = true,

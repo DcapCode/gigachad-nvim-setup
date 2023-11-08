@@ -173,9 +173,58 @@ These custom key mappings and commands are designed to enhance your workflow and
 ### Undotree
 - **Toggle Undo Tree**: In normal mode, press `<leader>u` to toggle the Undo Tree. The Undo Tree is a powerful feature that allows you to visualize and navigate the history of changes made to your document. It's a handy tool for reverting or redoing changes with precision.
 
-This key mapping is designed to provide quick access to the Undo Tree, enhancing
-your ability to manage and review your editing history in Neovim.
+This key mapping is designed to provide quick access to the Undo Tree, enhancing your ability to manage and review your editing history in Neovim.
 
+### LSP
+- **Select Previous Item**: Press `<Ctrl-p>` to navigate and select the previous item in the autocompletion list.
+
+- **Select Next Item**: Use `<Ctrl-n>` to move to and select the next item in the autocompletion list.
+
+- **Confirm and Select**: Press `<Ctrl-y>` to confirm and select the currently highlighted autocompletion item.
+
+- **Complete**: Use `<Ctrl-space>` to trigger autocompletion and display a list of suggested items.
+
+- **Go to Definition**: Press `gd` in normal mode to jump to the definition of the symbol under the cursor using LSP.
+
+- **Hover for Information**: Use `K` in normal mode to display hover information for the symbol under the cursor.
+
+- **Workspace Symbol Search**: Press `<Leader>vws` in normal mode to perform a workspace-wide symbol search using LSP.
+
+- **Open Diagnostic Float Window**: Use `<Leader>vd` in normal mode to open the diagnostic message in a floating window.
+
+- **Navigate to Next Diagnostic**: Press `[d` in normal mode to navigate to the next diagnostic message.
+
+- **Navigate to Previous Diagnostic**: Use `]d` in normal mode to navigate to the previous diagnostic message.
+
+- **Code Actions**: Press `<Leader>vca` in normal mode to trigger available code actions for the current context using LSP.
+
+- **Find References**: Use `<Leader>vrr` in normal mode to find references to the symbol under the cursor.
+
+- **Rename Symbol**: Press `<Leader>vrn` in normal mode to rename the symbol under the cursor using LSP.
+
+- **Signature Help**: In insert mode, press `<Ctrl-h>` to request signature help for the function or method you are typing.
+
+These key mappings and commands are tailored for LSP integration, making it easier to navigate your code, access diagnostic information, and perform code actions while coding in Neovim.
+## Debugger key mappings
+- **Continue Debugging**: Press `<F5>` to continue the debugging process.
+
+- **Step Over**: Use `<F10>` to step over the current line of code.
+
+- **Step Into**: Press `<F11>` to step into the code to debug it line by line.
+
+- **Step Out**: Use `<F12>` to step out of the current function or code block.
+
+- **Toggle Breakpoint**: Press `<Leader>b` to toggle a breakpoint at the current cursor position.
+
+- **Set Breakpoint with Condition**: Use `<Leader>B` to set a breakpoint with a specified condition. You'll be prompted to enter the condition.
+
+- **Set Log Point**: Press `<Leader>lp` to set a log point with a custom message. You can enter the message when prompted.
+
+- **Open Debugger REPL**: Use `<Leader>dr` to open the debugger's Read-Eval-Print Loop (REPL) for interactive debugging.
+
+- **Run Last Debug Configuration**: Press `<Leader>dl` to run the last-used debug configuration.
+
+These key mappings are designed to streamline the debugging process in Neovim, allowing you to efficiently navigate and interact with your code during debugging sessions.
 ## File structure
 .
 ├── init.lua
