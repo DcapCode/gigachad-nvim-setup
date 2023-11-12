@@ -95,6 +95,47 @@ coding sanctuary, where you have the tools and features needed to code
 efficiently, navigate projects seamlessly, and maintain full control over your
 coding history.
 
+#### 8. Fugitive
+Fugitive is a powerful Git wrapper for Neovim, created by Tim Pope. It 
+seamlessly integrates Git commands into Neovim, providing a convenient and 
+efficient interface for version control within your text editor. With Fugitive, 
+you can:
+
+    View Git Blame: Easily see who authored each line of code with Git blame
+    annotations.
+    Navigate Git History: Navigate through the Git commit history and view
+    changes with precision.
+    Execute Git Commands: Run Git commands directly from Neovim, making it easy
+    to stage, commit, pull, push, and more.
+    Git Diffs and Merges: Visualize and resolve Git diffs and merges directly
+    within Neovim.
+
+Fugitive enhances your Git workflow by bringing version control functionalities
+directly into your text editor, eliminating the need to switch between the
+terminal and Neovim.
+
+##### https://github.com/tpope/vim-fugitive
+#### 9. Gitsigns
+gitsigns is a lightweight Git signs plugin for Neovim, created by Adam 
+Stankiewicz. It provides unobtrusive Git status indicators in the gutter of 
+your code, allowing you to quickly understand the changes made to your files. 
+With gitsigns, you can:
+
+    View Git Status Indicators: See at a glance which lines have been added, 
+    modified, or deleted in your files.
+    Stage and Unstage Changes: Easily stage and unstage changes directly from 
+    the Neovim gutter.
+    Preview Hunks: Preview Git hunks before staging or committing changes.
+    Customizable Appearance: Customize the appearance of Git signs to suit your
+    preferences.
+
+gitsigns streamlines your Git workflow by offering a visual representation of 
+changes within Neovim, making it easier to understand and manage your Git 
+repositories.
+
+These plugins, when combined, provide a robust and efficient Git integration experience in Neovim, enhancing your version control workflow.
+##### https://github.com/lewis6991/gitsigns.nvim
+
 ## Understanding Vim Modes
 
 Vim, a powerful and highly customizable text editor, operates in three 
@@ -225,6 +266,9 @@ These key mappings and commands are tailored for LSP integration, making it easi
 - **Run Last Debug Configuration**: Press `<Leader>dl` to run the last-used debug configuration.
 
 These key mappings are designed to streamline the debugging process in Neovim, allowing you to efficiently navigate and interact with your code during debugging sessions.
+## Git commands
+The best place to get these is to read the gitsigns and fugitive plugins docs :)
+
 ## File structure
 .
 ├── init.lua
