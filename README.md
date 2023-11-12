@@ -156,7 +156,7 @@ you can perform complex editing tasks with precision and speed.
 - **Navigate Between Open Buffers**: Use `<Shift> + 1` to go to the next buffer and `<Shift> + h` to go to the previous buffer.
 
 ## Plugin key mappings
-<leader> is space
+leader is space
 ### Harpoon
 - **Add Current File to Mark**: In normal mode, press `<leader>a` to add the current file to the list of marked files. Marking files can help you keep track of important or frequently accessed files.
 
