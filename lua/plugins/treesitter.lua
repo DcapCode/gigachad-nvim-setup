@@ -15,7 +15,8 @@ return
                     'javascript',
                     'typescript',
                     'lua',
-                    'rust'
+                    'rust',
+                    'yaml'
                 },
 				highlight = { enable = true },
 				sync_install = false,
