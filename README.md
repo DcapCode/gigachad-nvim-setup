@@ -1,4 +1,4 @@
-# Starter GIGACHAD neovim setup
+# GIGACHAD neovim setup
 
 Are you tired of being a cry baby, confined to the limitations of bloated text
 editors like VSCode, Atom, or Sublime? Are you ready to level up, embrace the
