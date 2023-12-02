@@ -43,62 +43,85 @@ selected plugins and keymaps to enhance your productivity and streamline your
 workflow. Here's what you'll find in this setup:
 
 ### Plugins
+
 #### 1. Package Manager: Lazy.nvim
-Lazy.nvim is the secret sauce that keeps your Neovim configuration organized 
-and up-to-date. It simplifies the process of managing and installing plugins, 
-allowing you to focus on what you do best: writing code. With Lazy.nvim, 
+
+Lazy.nvim is the secret sauce that keeps your Neovim configuration organized
+and up-to-date. It simplifies the process of managing and installing plugins,
+allowing you to focus on what you do best: writing code. With Lazy.nvim,
 you won't need to break a sweat to maintain your plugin ecosystem.
+
 ##### https://github.com/folke/lazy.nvim
+
 #### 2. Harpoon
-Harpoon is your trusty companion for quick file navigation and 
+
+Harpoon is your trusty companion for quick file navigation and
 project management. It allows you to effortlessly switch between open projects,
 files, and directories, making the task of juggling multiple coding projects
 a breeze. No more digging through your file system - Harpoon keeps everything
 just a keypress away.
+
 ##### https://github.com/ThePrimeagen/harpoon
+
 #### 3. LSP (Language Server Protocol)
+
 LSP integration is your path to supercharged code intelligence. This setup
 utilizes the power of LSP to provide features like autocompletion,
 error checking, and code navigation. It's like having a coding assistant that
 anticipates your needs and provides real-time feedback to help you write code
 more efficiently.
+
 ##### https://github.com/VonHeikemen/lsp-zero.nvim
+
 #### 4. Telescope
+
 Telescope is your ultimate tool for finding, filtering, and acting on
 information within your Neovim environment. It's not just a file finder; it's a
 versatile tool for searching through files, projects, and more. Whether you're
 looking for a specific piece of code or a file deep in your project structure,
 Telescope has your back.
+
 ##### https://github.com/nvim-telescope/telescope.nvim
+
 #### 5. Themes
+
 The theme selection in this setup is all about personalization. Choose from a
 variety of eye-catching and well-crafted themes to make your coding environment
 truly yours. Whether you prefer a dark or light theme, there's something here
 to suit your style.
 I have no source for this. The current one installed is rose-pine but you can
 choose whatever, just google for it
+
 ##### https://github.com/rose-pine/neovim
+
 #### 6. Treesitter
+
 Treesitter is the magic behind accurate syntax highlighting and code analysis.
 It provides context-aware code understanding, allowing for precise and reliable
-syntax highlighting, indentation, and more. 
+syntax highlighting, indentation, and more.
 No more squinting at your code - Treesitter ensures it looks just right.
+
 ##### https://github.com/nvim-treesitter/nvim-treesitter
+
 #### 7. Undotree
+
 Undotree is your lifeline when you need to undo or redo your actions in Neovim.
 It offers a visual representation of your undo history, making it easier to
 navigate through changes and recover past states of your code. No more fear of
 irreversible mistakes - Undotree keeps your history intact.
+
 ##### https://github.com/mbbill/undotree
+
 With these plugins and configurations, your Neovim setup will transform into a
 coding sanctuary, where you have the tools and features needed to code
 efficiently, navigate projects seamlessly, and maintain full control over your
 coding history.
 
 #### 8. Fugitive
-Fugitive is a powerful Git wrapper for Neovim, created by Tim Pope. It 
-seamlessly integrates Git commands into Neovim, providing a convenient and 
-efficient interface for version control within your text editor. With Fugitive, 
+
+Fugitive is a powerful Git wrapper for Neovim, created by Tim Pope. It
+seamlessly integrates Git commands into Neovim, providing a convenient and
+efficient interface for version control within your text editor. With Fugitive,
 you can:
 
     View Git Blame: Easily see who authored each line of code with Git blame
@@ -115,65 +138,76 @@ directly into your text editor, eliminating the need to switch between the
 terminal and Neovim.
 
 ##### https://github.com/tpope/vim-fugitive
+
 #### 9. Gitsigns
-gitsigns is a lightweight Git signs plugin for Neovim, created by Adam 
-Stankiewicz. It provides unobtrusive Git status indicators in the gutter of 
-your code, allowing you to quickly understand the changes made to your files. 
+
+gitsigns is a lightweight Git signs plugin for Neovim, created by Adam
+Stankiewicz. It provides unobtrusive Git status indicators in the gutter of
+your code, allowing you to quickly understand the changes made to your files.
 With gitsigns, you can:
 
-    View Git Status Indicators: See at a glance which lines have been added, 
+    View Git Status Indicators: See at a glance which lines have been added,
     modified, or deleted in your files.
-    Stage and Unstage Changes: Easily stage and unstage changes directly from 
+    Stage and Unstage Changes: Easily stage and unstage changes directly from
     the Neovim gutter.
     Preview Hunks: Preview Git hunks before staging or committing changes.
     Customizable Appearance: Customize the appearance of Git signs to suit your
     preferences.
 
-gitsigns streamlines your Git workflow by offering a visual representation of 
-changes within Neovim, making it easier to understand and manage your Git 
+gitsigns streamlines your Git workflow by offering a visual representation of
+changes within Neovim, making it easier to understand and manage your Git
 repositories.
 
 These plugins, when combined, provide a robust and efficient Git integration experience in Neovim, enhancing your version control workflow.
+
 ##### https://github.com/lewis6991/gitsigns.nvim
+
+#### 10. Formatting (conform)
+
+Lightweight yet powerful formatter plugin for Neovim
+
+##### https://github.com/stevearc/conform.nvim#formatters
 
 ## Understanding Vim Modes
 
-Vim, a powerful and highly customizable text editor, operates in three 
-fundamental modes that give you control over different aspects of your editing 
+Vim, a powerful and highly customizable text editor, operates in three
+fundamental modes that give you control over different aspects of your editing
 experience. These modes are:
+
 ### 1. Normal Mode
+
 Normal mode is the default mode when you launch Vim. In this mode, you navigate
-through your text and perform various editing tasks. You can move the cursor, 
-delete, copy, paste, search, and more. It's your control center for issuing 
+through your text and perform various editing tasks. You can move the cursor,
+delete, copy, paste, search, and more. It's your control center for issuing
 commands and moving around your document.
 
-Entering Normal Mode: You're often in Normal mode by default when you open a 
-file in Vim. To make sure you're in Normal mode, press the Esc key if you're 
+Entering Normal Mode: You're often in Normal mode by default when you open a
+file in Vim. To make sure you're in Normal mode, press the Esc key if you're
 not sure.
 
 ### 2. Insert Mode
 
-Insert mode is where you actually type or insert text into your document. 
-It's the mode you're in when you want to add content to your file. 
+Insert mode is where you actually type or insert text into your document.
+It's the mode you're in when you want to add content to your file.
 In Insert mode, your keyboard behaves like a regular text editor.
 
-Entering Insert Mode: To enter Insert mode from Normal mode, press i to start 
-inserting text before the cursor, or a to append text after the cursor. To 
+Entering Insert Mode: To enter Insert mode from Normal mode, press i to start
+inserting text before the cursor, or a to append text after the cursor. To
 switch back to Normal mode, press Esc.
 
 ### 3. Visual Mode
 
-Visual mode allows you to select and manipulate text visually. You can 
-highlight text in various ways, such as character-wise, line-wise, or 
-block-wise selection. This is handy for copying, cutting, or applying commands 
+Visual mode allows you to select and manipulate text visually. You can
+highlight text in various ways, such as character-wise, line-wise, or
+block-wise selection. This is handy for copying, cutting, or applying commands
 to selected text.
 
-Entering Visual Mode: To enter Visual mode from Normal mode, press v to start 
-selecting text character-wise, or V to select lines, or Ctrl-v for block-wise 
+Entering Visual Mode: To enter Visual mode from Normal mode, press v to start
+selecting text character-wise, or V to select lines, or Ctrl-v for block-wise
 selection. To exit Visual mode, press Esc.
 
-Understanding and mastering these three modes is key to efficiently using Vim 
-for text editing and coding. By seamlessly transitioning between these modes, 
+Understanding and mastering these three modes is key to efficiently using Vim
+for text editing and coding. By seamlessly transitioning between these modes,
 you can perform complex editing tasks with precision and speed.
 
 ## Vim key mappings and commands (non plugin things)
@@ -197,8 +231,11 @@ you can perform complex editing tasks with precision and speed.
 - **Navigate Between Open Buffers**: Use `<Shift> + 1` to go to the next buffer and `<Shift> + h` to go to the previous buffer.
 
 ## Plugin key mappings
+
 leader is space
+
 ### Harpoon
+
 - **Add Current File to Mark**: In normal mode, press `<leader>a` to add the current file to the list of marked files. Marking files can help you keep track of important or frequently accessed files.
 
 - **Toggle Quick Menu**: Press `<C-e>` in normal mode to toggle the quick menu. The quick menu is a handy tool for quick access to various actions or functionalities.
@@ -212,11 +249,13 @@ leader is space
 These custom key mappings and commands are designed to enhance your workflow and provide quick access to specific actions, such as marking files, toggling the quick menu, and navigating between files in the quick menu.
 
 ### Undotree
+
 - **Toggle Undo Tree**: In normal mode, press `<leader>u` to toggle the Undo Tree. The Undo Tree is a powerful feature that allows you to visualize and navigate the history of changes made to your document. It's a handy tool for reverting or redoing changes with precision.
 
 This key mapping is designed to provide quick access to the Undo Tree, enhancing your ability to manage and review your editing history in Neovim.
 
 ### LSP
+
 - **Select Previous Item**: Press `<Ctrl-p>` to navigate and select the previous item in the autocompletion list.
 
 - **Select Next Item**: Use `<Ctrl-n>` to move to and select the next item in the autocompletion list.
@@ -246,7 +285,13 @@ This key mapping is designed to provide quick access to the Undo Tree, enhancing
 - **Signature Help**: In insert mode, press `<Ctrl-h>` to request signature help for the function or method you are typing.
 
 These key mappings and commands are tailored for LSP integration, making it easier to navigate your code, access diagnostic information, and perform code actions while coding in Neovim.
+
+### Formatting
+
+- **Trigger formatting manually**: in insert or visua mode press `<lieader>mp` to trigger the formatting
+
 ## Debugger key mappings
+
 - **Continue Debugging**: Press `<F5>` to continue the debugging process.
 
 - **Step Over**: Use `<F10>` to step over the current line of code.
@@ -266,10 +311,13 @@ These key mappings and commands are tailored for LSP integration, making it easi
 - **Run Last Debug Configuration**: Press `<Leader>dl` to run the last-used debug configuration.
 
 These key mappings are designed to streamline the debugging process in Neovim, allowing you to efficiently navigate and interact with your code during debugging sessions.
+
 ## Git commands
+
 The best place to get these is to read the gitsigns and fugitive plugins docs :)
 
 ## File structure
+
 .
 ├── init.lua
 ├── lazy-lock.json
@@ -283,24 +331,28 @@ The best place to get these is to read the gitsigns and fugitive plugins docs :)
 │   │   ├── colorscheme.lua
 │   │   └── keys.lua
 │   └── plugins
-│       ├── harpoon.lua
-│       ├── lsp.lua
-│       ├── telescope.lua
-│       ├── themes.lua
-│       ├── treesitter.lua
-│       └── undotree.lua
+│   ├── harpoon.lua
+│   ├── lsp.lua
+│   ├── telescope.lua
+│   ├── themes.lua
+│   ├── treesitter.lua
+│   └── undotree.lua
 └── README.md
+
 ## File structure description
+
 - **init.lua**: This is a Lua configuration file for Neovim. It's the entry point for your Neovim setup and contains various configurations and settings.
 
 - **lazy-lock.json**: This JSON is related to your plugin management.
 
 - **lua/core**: This directory contains core configurations for your Neovim setup.
+
   - **keymaps.lua**: Contains key mappings and custom shortcuts that enhance your editing experience.
   - **lazy.lua**: This file is related to plugin management or lazy loading of plugins.
   - **options.lua**: Includes various options and settings for Neovim.
 
 - **lua/helpers**: This directory contains helper functions and utilities to simplify and streamline your Neovim setup.
+
   - **buffers.lua**: Includes functions for managing buffers, such as deleting or switching between them.
   - **colorscheme.lua**: Customizing the color scheme of your Neovim environment.
   - **keys.lua**: Contains utility functions for working with key mappings and shortcuts.
