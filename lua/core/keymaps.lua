@@ -11,7 +11,7 @@ map('v', 'L', ":m '<-2<CR>gv=gv", 'Move highlighted text down')
 map('n', 'J', 'mzJ`z', 'Append below line to current line')
 -- Jumping half page keeps the cursor in the middle
 map('n', '<C-d>', '<C-d>zz', 'Jumping half page up')
-map('n','<C-u>', '<C-u>zz', 'Jumping half page down')
+map('n', '<C-u>', '<C-u>zz', 'Jumping half page down')
 -- Keeping search terms in the middle
 map('n', 'n', 'nzzzv')
 map('n', 'N', 'Nzzzv')
@@ -35,7 +35,7 @@ map('n', '<leader>j', '<cmd>lprev<CR>zz')
 -- Replacing the current word we are at
 map('n', '<leader>s', ':%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left>', 'Replace the current word')
 -- Make file executable
-map('n', '<leader>x', '<cmd>!chmod +x %<CR>', {silent = true})
+map('n', '<leader>x', '<cmd>!chmod +x %<CR>', { silent = true })
 -- Move with shift-arrows
 map('n', '<S-Up>', '<C-w><S-k>', 'Move window up')
 map('n', '<S-Down>', '<C-w><C-j>', 'Move window down')
@@ -46,7 +46,6 @@ map('n', '<C-Up>', ':resize +2<CR>')
 map('n', '<C-Down>', ':resize -2<CR>')
 map('n', '<C-Left>', ':vertical resize +2')
 map('n', '<C-Right>', ':vertical resize -2')
-
 -- Deleting buffers
 local buffers = require("helpers.buffers")
 map('n', '<leader>db', buffers.delete_this, 'Current buffer')
@@ -55,3 +54,40 @@ map('n', '<leader>da', buffers.delete_all, 'All buffers')
 -- Navigate buffers
 map('n', '<S-1>', ':bnext<CR>', 'Next buffer')
 map('n', '<S-h>', ':bprevious<CR>', 'Previous buffer')
+
+local augroup = vim.api.nvim_create_augroup
+local dcapedcodeGroup = augroup('dcapedcode', {})
+
+local autocmd = vim.api.nvim_create_autocmd
+local yank_group = augroup('HighlightYank', {})
+
+function R(name)
+	require("plenary.reload").reload_module(name)
+end
+
+vim.filetype.add({
+	extensions = {
+		templ = 'templ'
+	}
+})
+
+autocmd('TextYankPost', {
+	group = yank_group,
+	pattern = '*',
+	callback = function()
+		vim.highlight.on_yank({
+			higroup = 'IncSearch',
+			timeout = 40,
+		})
+	end,
+})
+
+autocmd({ "BufWritePre" }, {
+	group = dcapedcodeGroup,
+	pattern = '*',
+	command = [[%s/\s+$//e]]
+})
+
+vim.g.netrw_browse_split = 0
+vim.g.netrw_banner = 0
+vim.g.netrw_winsize = 25
