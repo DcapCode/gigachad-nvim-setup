@@ -10,10 +10,10 @@ return {
             map('n', '<leader>tt', function()
                 require("trouble").toggle()
             end)
-            map('n', '<leader>tn', function()
+            map('n', '[d', function()
                 require('trouble').next({ skip_groups = true, jump = true })
             end)
-            map('n', '<leader>tp', function()
+            map('n', ']d', function()
                 require('trouble').previous({ skip_groups = true, jump = true })
             end)
         end,
