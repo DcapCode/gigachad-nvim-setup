@@ -16,11 +16,10 @@ map('n', '<C-u>', '<C-u>zz', 'Jumping half page down')
 map('n', 'n', 'nzzzv')
 map('n', 'N', 'Nzzzv')
 -- IMPORTANT! When copying and pasting keep the paste in the paste register
-map('x', '<leader>p', "\"_dP", 'Keep paste registry after pasting')
+map('x', '<leader>p', "[[\"_dP]]", 'Keep paste registry after pasting')
 -- Put copy into +registry to allow pasting outside nvim
-map('n', '<leader>y', "\"+y")
-map('v', '<leader>y', "\"+y")
-map('n', '<leader>Y', "\"+Y")
+map({ "n", "v" }, '<leader>y', "[[\"+y]]")
+map('n', '<leader>Y', "[[\"+Y]]")
 -- Deleting to void registry
 map('n', '<leader>d', "\"_d")
 map('v', '<leader>d', "\"_d")
