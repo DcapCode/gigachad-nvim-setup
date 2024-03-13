@@ -17,6 +17,7 @@ return {
             require("mason-lspconfig").setup({
                 ensure_installed = {
                     "lua_ls",
+                    "gopls"
                 },
                 handlers = {
                     function(server_name)
@@ -33,6 +34,21 @@ return {
                                 }
                             }
                         }
+                    end,
+                    ["gopls"] = function()
+                        local lspconfig = require("lspconfig")
+                        lspconfig.gopls.setup({
+                            settings = {
+                                gopls = {
+                                    completeUnimported = true,
+                                    usePlaceholders = true,
+                                    gofumpt = true,
+                                    analyses = {
+                                        unusedparams = true
+                                    }
+                                }
+                            }
+                        })
                     end
                 }
             })
